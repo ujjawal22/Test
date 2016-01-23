@@ -144,23 +144,14 @@ public class MainActivity extends Activity {
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        //Display the first 50 characters of the response string.
-                        //textView.setText("Response is :" + response.substring(45, 66));
+                        
                         String s = response.toString();
+                        //seeing response in Logcat for debugging puroposes
                         Log.i(TAG, "Response is : " + s);
-                        String[] y = s.split(" ");
+                        //Toast to display the final response 
+                        Toast toast = Toast.makeText(MainActivity.this, OutputMessage.out(s), Toast.LENGTH_LONG);
+                        toast.show();
 
-                        if(y[1].equals("1,")){
-                            textView.setText(R.string.final_alert_1);
-                        }
-                        else if ((y[1].equals("0,")) && y[4].equals("already")){
-
-                            textView.setText(R.string.final_alert_2);
-                        }
-                        else {
-
-                            textView.setText(R.string.final_alert_3);
-                        }
 
 
                     }
