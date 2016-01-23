@@ -1,0 +1,9 @@
+<resources>
+<style name="Screenslidernew" parent="android:Theme.Material.Light.DarkActionBar">
+    <item name="android:actionBarStyle">@style/DarkActionBar</item>
+</style>
+
+<style name="DarkActionBar" parent="android:Widget.Material.ActionBar">
+    <item name="android:background">@android:color/transparent</item>
+</style>
+</resources>
